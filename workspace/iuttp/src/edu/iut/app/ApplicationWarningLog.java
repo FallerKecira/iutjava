@@ -9,7 +9,6 @@ public class ApplicationWarningLog extends AbstractApplicationLog {
 	@Override
 	public void setMessage(String message) {
 		this.message = message;
-		ApplicationSession.instance().getGUILogger().warning(this.message);
 		super.fireMessage("[WARNING]", this.message);
 	}
 }
